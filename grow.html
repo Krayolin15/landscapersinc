@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Grow Together | Landscapers Inc.</title>
+<meta name="description" content="Ready to transform your outdoor space? Get in touch with Landscapers Inc for a free site assessment and quote.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#070B08">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .grow-hero{ min-height:100vh; display:flex; align-items:center; position:relative; overflow:hidden; padding: 140px 0 100px; }
+  .grow-hero-bg{ position:absolute; inset:-6%; z-index:0; }
+  .grow-hero-bg img{ width:100%; height:100%; object-fit:cover; transform:scale(1.08); }
+  .grow-hero-bg::after{ content:''; position:absolute; inset:0; background: radial-gradient(120% 100% at 30% 20%, rgba(7,11,8,.55), rgba(7,11,8,.94)); }
+  .grow-inner{ position:relative; z-index:2; max-width:820px; }
+  .grow-inner h1{ font-size: clamp(2.6rem, 6vw, 5rem); font-weight:500; margin-bottom:26px; }
+  .grow-inner p.lead{ font-size:1.15rem; max-width:56ch; margin-bottom:44px; }
+  .grow-actions{ display:flex; gap:20px; flex-wrap:wrap; margin-bottom:70px; }
+  .grow-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .grow-card{ padding:30px 26px; border-radius:20px; border:1px solid var(--line); background: rgba(244,241,232,.03); }
+  .grow-card i{ color: var(--emerald-bright); font-size:1.3rem; margin-bottom:16px; display:block; }
+  .grow-card h4{ font-family:var(--f-body); font-size:.95rem; font-weight:700; margin-bottom:6px; }
+  .grow-card p{ font-size:.85rem; }
+  @media(max-width:800px){ .grow-cards{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<nav class="navbar scrolled" id="navbar" style="position:relative;">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-mountain-sun"></i></span>
+      <span>Landscapers Inc.<span class="logo-sub">Durban · KZN</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#home" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#services" class="nav-link">Services</a></li>
+      <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://wa.me/27691315387" class="btn btn-ghost magnetic"><span>WhatsApp Us</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="grow-hero">
+  <div class="grow-hero-bg"><img src="img5.jpg" alt="Water feature garden, Landscapers Inc"></div>
+  <div class="container grow-inner">
+    <div class="eyebrow"><i class="fa-solid fa-seedling"></i> Let's Grow Together</div>
+    <h1>Every great garden <span class="italic">starts with a conversation.</span></h1>
+    <p class="lead">Tell us about your space and we'll arrange a free, no-obligation site assessment — then bring you a tailored plan and honest quote within 24 hours.</p>
+    <div class="grow-actions">
+      <a href="https://wa.me/27691315387?text=Hi%2C%20I%27d%20like%20to%20start%20a%20project%20with%20Landscapers%20Inc." class="btn btn-primary magnetic"><span>Chat on WhatsApp</span><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="index.html#contact" class="btn btn-ghost magnetic"><span>Use the Contact Form</span></a>
+    </div>
+
+    <div class="grow-cards">
+      <div class="grow-card"><i class="fa-solid fa-phone"></i><h4>Call or WhatsApp</h4><p>+27 69 131 5387 — usually answered same day.</p></div>
+      <div class="grow-card"><i class="fa-solid fa-envelope"></i><h4>Email Us</h4><p>Sales@landscapersinc.co.za</p></div>
+      <div class="grow-card"><i class="fa-solid fa-location-dot"></i><h4>Based In</h4><p>Mount Edgecombe, serving greater Durban & KZN.</p></div>
+    </div>
+  </div>
+</header>
+
+<footer class="site-footer">
+  <div class="container footer-bottom" style="border-top:none;">
+    <p>© 2026 Landscapers Inc. All Rights Reserved</p>
+    <div class="fb-links"><a href="index.html">Back to Home</a></div>
+  </div>
+</footer>
+
+<div class="float-dock">
+  <a href="https://wa.me/27691315387" class="dock-btn dock-whatsapp" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<script>
+  var isTouch = window.matchMedia('(hover:none), (pointer:coarse)').matches;
+  var ring = document.getElementById('cursorRing');
+  var dot = document.getElementById('cursorDot');
+  if (!isTouch) {
+    var mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove', function(e){ mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
+    (function loop(){ rx += (mx-rx)*0.16; ry += (my-ry)*0.16; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
+    document.addEventListener('mouseover', function(e){ if (e.target.closest('a,button')) ring.classList.add('hover'); });
+    document.addEventListener('mouseout', function(e){ if (e.target.closest('a,button')) ring.classList.remove('hover'); });
+  }
+  document.querySelectorAll('.magnetic').forEach(function(btn){
+    btn.addEventListener('mousemove', function(e){
+      if (isTouch) return;
+      var r = btn.getBoundingClientRect();
+      var x = e.clientX - r.left - r.width/2, y = e.clientY - r.top - r.height/2;
+      btn.style.transform = 'translate(' + (x*0.25) + 'px,' + (y*0.35) + 'px)';
+    });
+    btn.addEventListener('mouseleave', function(){ btn.style.transform='translate(0,0)'; });
+  });
+</script>
+</body>
+</html>
