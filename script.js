@@ -359,7 +359,7 @@
       'Address: ' + address + '\n' +
       'Details: ' + message;
 
-    var url = 'https://wa.me/27691315387?text=' + encodeURIComponent(text);
+    var url = 'https://wa.me/27706957485?text=' + encodeURIComponent(text);
 
     form.classList.add('hide');
     document.getElementById('successMessage').classList.add('show');
