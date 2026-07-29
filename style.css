@@ -801,3 +801,309 @@ body.lock-scroll{ overflow:hidden; }
   .container{ padding:0 22px; }
   .nav-inner{ padding: 0; }
 }
+
+/* ==========================================================
+   EXTRA LARGE DESKTOPS (1600px+)
+   ========================================================== */
+@media (min-width:1600px){
+
+    :root{
+        --container:1500px;
+    }
+
+    .container{
+        max-width:1500px;
+    }
+
+    .hero h1{
+        font-size:7.2rem;
+    }
+
+    h2{
+        font-size:4.8rem;
+    }
+
+    .services-grid{
+        gap:32px;
+    }
+
+    .hero-meta{
+        right:70px;
+    }
+
+}
+
+
+/* ==========================================================
+   LARGE LAPTOPS (1400px)
+   ========================================================== */
+@media (max-width:1400px){
+
+    .container{
+        padding:0 32px;
+    }
+
+    .services-grid{
+        gap:20px;
+    }
+
+    .about-grid{
+        gap:70px;
+    }
+
+}
+
+
+/* ==========================================================
+   LAPTOPS (1200px)
+   ========================================================== */
+@media (max-width:1200px){
+
+    .hero h1{
+        max-width:14ch;
+    }
+
+    .about-grid{
+        gap:60px;
+    }
+
+    .footer-top{
+        gap:40px;
+    }
+
+    .contact-grid{
+        gap:30px;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLETS (992px)
+   ========================================================== */
+@media (max-width:992px){
+
+    .container{
+        padding:0 26px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:140px;
+        padding-bottom:90px;
+    }
+
+    .hero-inner{
+        text-align:center;
+    }
+
+    .hero-sub{
+        margin-inline:auto;
+    }
+
+    .hero-btns{
+        justify-content:center;
+    }
+
+    .scroll-cue{
+        display:none;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* ==========================================================
+   LARGE PHONES / SMALL TABLETS (768px)
+   ========================================================== */
+@media (max-width:768px){
+
+    :root{
+        --nav-h:80px;
+    }
+
+    .container{
+        padding:0 22px;
+    }
+
+    h2{
+        font-size:2.3rem;
+    }
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .hero-btns{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .hero-btns .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .section-head{
+        margin-bottom:45px;
+    }
+
+    .pricing-card{
+        padding:50px 30px;
+    }
+
+    .contact-panel,
+    .form-panel{
+        padding:32px 24px;
+    }
+
+    .gallery-grid{
+        columns:2;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE DEVICES (576px)
+   ========================================================== */
+@media (max-width:576px){
+
+    .container{
+        padding:0 18px;
+    }
+
+    section{
+        overflow:hidden;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero h1{
+        font-size:2.7rem;
+        line-height:1.1;
+    }
+
+    .hero-sub{
+        font-size:1rem;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        columns:1;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .pricing-card{
+        padding:40px 22px;
+        border-radius:24px;
+    }
+
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL PHONES (400px)
+   ========================================================== */
+@media (max-width:400px){
+
+    html{
+        font-size:15px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .eyebrow{
+        font-size:.62rem;
+        letter-spacing:.18em;
+    }
+
+    .btn{
+        padding:16px 22px;
+        font-size:.75rem;
+    }
+
+    .service-content{
+        padding:22px;
+    }
+
+    .pricing-card{
+        padding:30px 18px;
+    }
+
+    .contact-panel,
+    .form-panel{
+        padding:24px 18px;
+    }
+
+    .float-dock{
+        right:14px;
+        bottom:14px;
+    }
+
+    .dock-btn{
+        width:48px;
+        height:48px;
+    }
+
+}
+
+
+/* ==========================================================
+   LANDSCAPE PHONES
+   ========================================================== */
+@media (max-height:500px) and (orientation:landscape){
+
+    .hero{
+        min-height:700px;
+    }
+
+    .mobile-menu a{
+        font-size:3rem;
+    }
+
+}
