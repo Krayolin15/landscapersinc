@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://landscapersinc.co.za/sitemap.xml
