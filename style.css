@@ -360,6 +360,7 @@ p { text-wrap: pretty; }
 .reel-play .i { width: 62px; height: 62px; padding: 20px; border-radius: 50%; background: rgba(245, 242, 233, .92); color: var(--ink); transition: transform .4s var(--ease), background .3s; }
 .reel-play:hover .i { transform: scale(1.1); background: var(--gold); }
 .reel.is-playing .reel-play { opacity: 0; }
+.reel-play[hidden] { display: none; }
 .reel figcaption { position: absolute; left: 16px; bottom: 14px; right: 16px; font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; pointer-events: none; transition: opacity .4s; }
 .reel.is-playing figcaption { opacity: 0; }
 

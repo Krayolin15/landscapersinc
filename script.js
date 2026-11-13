@@ -258,7 +258,8 @@
   $$('.reel').forEach(function (reel) {
     var v = $('video', reel), b = $('.reel-play', reel);
     b.addEventListener('click', function () {
-      $$('.reel.is-playing video').forEach(function (o) { if (o !== v) { o.pause(); } });
+      $$('.reel video').forEach(function (o) { if (o !== v) { o.pause(); } });
+      v.muted = false;
       v.controls = true;
       var p = v.play();
       if (p && p.catch) p.catch(function () {});
@@ -266,7 +267,8 @@
       v.focus();
     });
     v.addEventListener('play', function () { reel.classList.add('is-playing'); });
-    v.addEventListener('pause', function () { reel.classList.remove('is-playing'); if (v.ended || v.currentTime === 0) b.hidden = false; });
+    v.addEventListener('pause', function () { reel.classList.remove('is-playing'); });
+    v.addEventListener('ended', function () { v.controls = false; v.load(); b.hidden = false; });   // back to the poster + play button
   });
 
   /* ---------- FAQ accordion ---------- */
