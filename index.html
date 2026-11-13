@@ -216,7 +216,11 @@
   </div>
   <div class="wrap hero-inner">
     <p class="eyebrow eyebrow--light hero-loc"><span class="dot"></span>Mount Edgecombe · Durban · KZN</p>
-    <h1 class="hero-title"><span class="ln"><span>We create outdoor</span></span> <span class="ln"><span>spaces that <em>inspire.</em></span></span></h1>
+     <h1 class="hero-title">
+  <span class="ln"><span>Transforming your Outdoor Spaces</span></span>
+  <span class="ln"><span>One Garden</span></span>
+  <span class="ln"><span><em>at a Time</em></span></span>
+</h1>
     <p class="hero-sub">Transforming ordinary landscapes into extraordinary outdoor environments through professional landscaping, thoughtful design and exceptional care.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn--gold">Request a free quote <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -522,28 +526,66 @@
 
 <!-- ============ ON SITE (REELS) ============ -->
 <section class="reels sec sec--dark" data-nav="dark" aria-labelledby="reelsTitle">
-  <div class="wrap reels-grid">
-    <header class="sec-head">
-      <p class="eyebrow eyebrow--light" data-reveal>On site</p>
-      <h2 id="reelsTitle" data-reveal>See the work <em>as it happens.</em></h2>
-      <p data-reveal>Short clips from our team in the field — planting, shaping and maintaining gardens across Durban.</p>
-      <a href="https://www.instagram.com/landscapers_inc/" target="_blank" rel="noopener" class="link-arrow" data-reveal>Follow our work on Instagram <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <div class="wrap">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow eyebrow--light" data-reveal>On site</p>
+        <h2 id="reelsTitle" data-reveal>See the work <em>as it happens.</em></h2>
+      </div>
+      <div>
+        <p data-reveal>Real footage from our team in the field — planting, shaping and maintaining gardens across Durban. Tap a video to play it with sound.</p>
+        <a href="https://www.instagram.com/landscapers_inc/" target="_blank" rel="noopener" class="link-arrow" data-reveal>Follow our work on Instagram <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <div class="t-nav reel-nav" data-reveal>
+          <button type="button" class="round-btn round-btn--light" id="reelPrev" aria-label="Previous videos"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg></button>
+          <button type="button" class="round-btn round-btn--light" id="reelNext" aria-label="More videos"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </div>
+      </div>
     </header>
-    <div class="reel-row">
+    <div class="reel-row" id="reelRow" tabindex="0" aria-label="Project videos — scroll sideways for more">
       <figure class="reel" data-reveal>
-        <video preload="none" playsinline poster="assets/video/reel-planting.jpg" aria-label="Video: tending a flower bed along a brick pathway"><source src="assets/video/reel-planting.mp4" type="video/mp4"></video>
-        <button type="button" class="reel-play" aria-label="Play video: planting and bed care"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
-        <figcaption>Planting &amp; bed care</figcaption>
+        <video preload="none" playsinline poster="assets/video/greenery.jpg" width="720" height="1280" aria-label="Video: Garden borders, flowering agapanthus and a water feature"><source src="assets/video/greenery.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: A little greenery goes a long way"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>A little greenery goes a long way</figcaption>
       </figure>
       <figure class="reel" data-reveal>
-        <video preload="none" playsinline poster="assets/video/reel-lawn.jpg" aria-label="Video: mowing and edging a lawn"><source src="assets/video/reel-lawn.mp4" type="video/mp4"></video>
-        <button type="button" class="reel-play" aria-label="Play video: lawn cutting and edging"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
-        <figcaption>Lawn cutting &amp; edging</figcaption>
+        <video preload="none" playsinline poster="assets/video/overgrown-to-outstanding.jpg" width="720" height="1280" aria-label="Video: Our team mowing, edging and cleaning up lawns"><source src="assets/video/overgrown-to-outstanding.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: From overgrown to outstanding"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>From overgrown to outstanding</figcaption>
       </figure>
       <figure class="reel" data-reveal>
-        <video preload="none" playsinline poster="assets/video/reel-gardens.jpg" aria-label="Video: a walk through maintained estate gardens"><source src="assets/video/reel-gardens.mp4" type="video/mp4"></video>
-        <button type="button" class="reel-play" aria-label="Play video: estate gardens walk-through"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
-        <figcaption>Estate gardens</figcaption>
+        <video preload="none" playsinline poster="assets/video/extraordinary-spaces.jpg" width="720" height="1280" aria-label="Video: Layered planting and an aloe garden along a paved driveway"><source src="assets/video/extraordinary-spaces.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: Extraordinary outdoor spaces"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>Extraordinary outdoor spaces</figcaption>
+      </figure>
+      <figure class="reel" data-reveal>
+        <video preload="none" playsinline poster="assets/video/one-garden-at-a-time.jpg" width="720" height="1280" aria-label="Video: Planting and caring for a flower bed along a brick path"><source src="assets/video/one-garden-at-a-time.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: One garden at a time"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>One garden at a time</figcaption>
+      </figure>
+      <figure class="reel" data-reveal>
+        <video preload="none" playsinline poster="assets/video/precision-quality.jpg" width="720" height="1280" aria-label="Video: Hedges, shrubs and planting maintained at an estate entrance"><source src="assets/video/precision-quality.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: Precision, quality, professionalism"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>Precision, quality, professionalism</figcaption>
+      </figure>
+      <figure class="reel" data-reveal>
+        <video preload="none" playsinline poster="assets/video/right-care.jpg" width="720" height="1280" aria-label="Video: Our team clearing and replanting a garden bed beside a driveway"><source src="assets/video/right-care.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: Nature’s beauty starts with the right care"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>Nature’s beauty starts with the right care</figcaption>
+      </figure>
+      <figure class="reel" data-reveal>
+        <video preload="none" playsinline poster="assets/video/garden-maintenance.jpg" width="720" height="1280" aria-label="Video: Palm tree trimming, hedge cutting and lawn edging"><source src="assets/video/garden-maintenance.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: Professional garden maintenance"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>Professional garden maintenance</figcaption>
+      </figure>
+      <figure class="reel" data-reveal>
+        <video preload="none" playsinline poster="assets/video/your-garden-our-expertise.jpg" width="576" height="1024" aria-label="Video: Trimming hedges along a red brick wall"><source src="assets/video/your-garden-our-expertise.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: Your garden, our expertise"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>Your garden, our expertise</figcaption>
+      </figure>
+      <figure class="reel" data-reveal>
+        <video preload="none" playsinline poster="assets/video/every-detail-matters.jpg" width="720" height="1280" aria-label="Video: Planting and maintenance at a rooftop garden"><source src="assets/video/every-detail-matters.mp4" type="video/mp4"></video>
+        <button type="button" class="reel-play" aria-label="Play video: Every detail matters"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></button>
+        <figcaption>Every detail matters</figcaption>
       </figure>
     </div>
   </div>

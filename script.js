@@ -254,6 +254,22 @@
     sync();
   }
 
+  /* ---------- Reel carousel arrows ---------- */
+  var reelRow = $('#reelRow');
+  if (reelRow) {
+    var rp = $('#reelPrev'), rn = $('#reelNext');
+    var rStep = function () { var c = $('.reel', reelRow); return c ? (c.offsetWidth + 16) * Math.max(1, Math.floor(reelRow.clientWidth / (c.offsetWidth + 16))) : 300; };
+    var rSync = function () {
+      rp.disabled = reelRow.scrollLeft < 8;
+      rn.disabled = reelRow.scrollLeft > reelRow.scrollWidth - reelRow.clientWidth - 8;
+    };
+    rp.addEventListener('click', function () { reelRow.scrollBy({ left: -rStep(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    rn.addEventListener('click', function () { reelRow.scrollBy({ left: rStep(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    reelRow.addEventListener('scroll', rSync, { passive: true });
+    window.addEventListener('resize', rSync);
+    rSync();
+  }
+
   /* ---------- Reels (video loads only when asked for) ---------- */
   $$('.reel').forEach(function (reel) {
     var v = $('video', reel), b = $('.reel-play', reel);
